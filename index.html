@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- custom css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <title>Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 500px;
+            height: 100vh;
+            margin: 0px auto;
+        }
+
+        form input,
+        textarea {
+            width: 100%;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: aliceblue;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 40px;
+            color: #FFFFFF;
+        }
+
+        .send_btn {
+            cursor: pointer;
+            background: aquamarine;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="post" enctype="multipart/form-data" action="/process">
+        <h2>Form</h2>
+        <input name="name" type="text" placeholder="Name" />
+        <input name="sname" type="text" placeholder="Surname" />
+        <input name="age" type="number" placeholder="Age" />
+        <input name="phone" type="number" placeholder="Phone" />
+        <input name="date" type="date" placeholder="Birthday" />
+        <input name="email" type="email" placeholder="Email" />
+        <input name="address" type="text" placeholder="Address" />
+        <input name="pic" type="file" />
+        <textarea name="message" rows="5" cols="30" id="" placeholder="Write your message"></textarea>
+        <input type="submit" value="Send" class="send_btn" />
+    </form>
+
+</body>
+
+</html>
